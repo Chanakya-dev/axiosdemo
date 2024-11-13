@@ -11,7 +11,7 @@ function Body() {
     const fetchPopularMovies = async () => {
       try {
         const response = await axios.get(
-          `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_TMDB_API_KEY}&language=en-US&page=2&with_genres=80`
+          `https://api.themoviedb.org/3/movie/popular?api_key=${process.env.REACT_APP_TMDB_API_KEY}&language=en-US&page=2`
         );
         setMovies(response.data.results); 
       } catch (error) {
